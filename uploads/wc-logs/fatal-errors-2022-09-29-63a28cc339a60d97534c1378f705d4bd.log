@@ -1,0 +1,48 @@
+2022-09-29T08:13:43+00:00 CRITICAL require(): Failed opening required '/Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/themes/devgrocery/inc/custom-header.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/themes/devgrocery/functions.php on line 160
+
+2022-09-29T08:13:43+00:00 CRITICAL require(): Failed opening required '/Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/themes/devgrocery/inc/custom-header.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/themes/devgrocery/functions.php on line 160
+
+2022-09-29T08:14:13+00:00 CRITICAL require(): Failed opening required '/Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/themes/devgrocery/inc/template-tags.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/themes/devgrocery/functions.php on line 160
+
+2022-09-29T08:14:13+00:00 CRITICAL require(): Failed opening required '/Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/themes/devgrocery/inc/template-tags.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/themes/devgrocery/functions.php on line 160
+
+2022-09-29T08:14:42+00:00 CRITICAL Uncaught Error: Call to undefined function devgrocery_post_thumbnail() in /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/themes/devgrocery/template-parts/content-page.php:17
+Stack trace:
+#0 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-includes/template.php(772): require()
+#1 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-includes/template.php(716): load_template('/Users/ottoking...', false, Array)
+#2 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/themes/devgrocery/page.php(15): get_template_part('template-parts/...', 'page')
+#4 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-includes/template-loader.php(106): include('/Users/ottoking...')
+#5 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-blog-header.php(19): require_once('/Users/ottoking...')
+#6 /Users/ottokingstedt/Local Sites/devgrocery/a in /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/themes/devgrocery/template-parts/content-page.php on line 17
+
+2022-09-29T08:14:44+00:00 CRITICAL Uncaught Error: Call to undefined function devgrocery_post_thumbnail() in /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/themes/devgrocery/template-parts/content-page.php:17
+Stack trace:
+#0 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-includes/template.php(772): require()
+#1 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-includes/template.php(716): load_template('/Users/ottoking...', false, Array)
+#2 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/themes/devgrocery/page.php(15): get_template_part('template-parts/...', 'page')
+#4 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-includes/template-loader.php(106): include('/Users/ottoking...')
+#5 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-blog-header.php(19): require_once('/Users/ottoking...')
+#6 /Users/ottokingstedt/Local Sites/devgrocery/a in /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/themes/devgrocery/template-parts/content-page.php on line 17
+
+2022-09-29T08:14:46+00:00 CRITICAL Uncaught Error: Call to undefined function devgrocery_post_thumbnail() in /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/themes/devgrocery/template-parts/content-page.php:17
+Stack trace:
+#0 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-includes/template.php(772): require()
+#1 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-includes/template.php(716): load_template('/Users/ottoking...', false, Array)
+#2 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/themes/devgrocery/page.php(15): get_template_part('template-parts/...', 'page')
+#4 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-includes/template-loader.php(106): include('/Users/ottoking...')
+#5 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-blog-header.php(19): require_once('/Users/ottoking...')
+#6 /Users/ottokingstedt/Local Sites/devgrocery/a in /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/themes/devgrocery/template-parts/content-page.php on line 17
+
+2022-09-29T08:14:47+00:00 CRITICAL Uncaught Error: Call to undefined function devgrocery_post_thumbnail() in /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/themes/devgrocery/template-parts/content-page.php:17
+Stack trace:
+#0 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-includes/template.php(772): require()
+#1 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-includes/template.php(716): load_template('/Users/ottoking...', false, Array)
+#2 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-includes/general-template.php(204): locate_template(Array, true, false, Array)
+#3 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/themes/devgrocery/page.php(15): get_template_part('template-parts/...', 'page')
+#4 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-includes/template-loader.php(106): include('/Users/ottoking...')
+#5 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-blog-header.php(19): require_once('/Users/ottoking...')
+#6 /Users/ottokingstedt/Local Sites/devgrocery/a in /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/themes/devgrocery/template-parts/content-page.php on line 17
+
