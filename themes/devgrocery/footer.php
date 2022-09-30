@@ -12,6 +12,8 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
+
+	<h3>Test footer!</h3>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
