@@ -221,3 +221,62 @@ function remove_woocommerce_styles($enqueue_styles) {
 add_filter( 'woocommerce_enqueue_styles',  'remove_woocommerce_styles');
 
 
+add_action( 'admin_post_nopriv_contact_form', 'process_contact_form' );
+
+add_action( 'admin_post_contact_form', 'process_contact_form' );
+
+function process_contact_form(){
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+	GLOBAL $wpdb;
+
+	$params = $_POST;
+
+        $params['contact_full_name'] = preg_replace("/[^a-zA-Z ]+/", "",filter_var(strip_tags($params['contact_full_name']), FILTER_SANITIZE_STRING));
+        $params['contact_email'] = filter_var(strip_tags($params['contact_email']), FILTER_SANITIZE_EMAIL);
+
+	/*create table if not exists*/
+
+	$table_name = $wpdb->prefix.'custom_contact_form';
+
+	$query = $wpdb->prepare( 'SHOW TABLES LIKE %s', $wpdb->esc_like( $table_name ) );
+
+	if ( ! $wpdb->get_var( $query ) == $table_name ) {
+
+		$sql = "CREATE TABLE {$table_name} (
+		id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+		contact_full_name VARCHAR(255) NOT NULL,
+		contact_email VARCHAR(255) NOT NULL,
+		created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+	)";
+
+	if($wpdb->query($sql)){
+		submitsForm($table_name,$params);
+	}
+
+
+}else{
+}
+
+/*create table if not exists*/
+
+die;
+
+}
+
+}
+/* Contact Form Function */
+function submitsForm($table_name, $params){
+
+	GLOBAL $wpdb;
+
+	$curTime = date('Y-m-d H:i:s');
+
+	$query = "INSERT INTO {$table_name}(contact_full_name, contact_email,created_at) VALUES('{$params['contact_full_name']}','{$params['contact_email']}','{$curTime}')"; 
+
+	if($wpdb->query($query)){
+		wp_redirect($params['base_page'].'?success=1'); 
+	}else{
+		wp_redirect($params['base_page'].'?error=1'); 
+	}
+}
