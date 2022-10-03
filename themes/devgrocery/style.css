@@ -933,7 +933,6 @@ textarea {
 footer#colophon {
   background: #617c7c !important;
   height: 50vh;
-  text-align: center;
   padding: 60px 0 20px;
 }
 .inner-container {
@@ -944,13 +943,21 @@ footer#colophon {
 footer ul {
   list-style: none;
 }
-
+.col-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.col-footer h3 li {
+  text-align: start;
+}
 .inner-container .col-footer a {
   text-decoration: none;
-  color: #232323;
+  color: #2d2d2d;
+  align-items: flex-end;
 }
 .inner-container .col-footer a:hover {
-  color: #e6e6e6;
+  color: #ababab;
 }
 /* Block ACF */
 .block1 h1 {
