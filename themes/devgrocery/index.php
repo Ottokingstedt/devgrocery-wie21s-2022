@@ -20,20 +20,28 @@ get_header();
 			endif;
 
 			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+			<?php while ( have_posts() ) :
+				the_post(); 
 
-				get_template_part( 'template-parts/content', get_post_type() );
+				get_template_part( 'template-parts/content', get_post_type() ); ?>
+						<article class="post">
+                        <h3>
+                        <a href="<?php the_permalink(); ?>"> <?php the_title(); ?></a></h3>
+                        
+                        <?php the_content(); ?>
+                        
+                      
+                    </article>
 
-			endwhile;
+			<?php endwhile; ?>
 
-			the_posts_navigation();
+			<?php the_posts_navigation(); ?>
 
-		else :
+		<?php else : ?>
 
-			get_template_part( 'template-parts/content', 'none' );
+			<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-		endif;
+		<?php endif;
 		?>
 
 	</main><!-- #main -->
