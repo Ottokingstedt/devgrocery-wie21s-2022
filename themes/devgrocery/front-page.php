@@ -32,13 +32,13 @@ get_header();
       </div>
     </div>
     <div class="carousel-item" data-bs-interval="2000">
-	<img src="<?php echo get_template_directory_uri();?>/img/slider_2.png" class="d-block w-100" alt="...">
+	<img src="<?php echo get_template_directory_uri();?>/img/slider-2.png" class="d-block w-100" alt="...">
   <div class="carousel-caption d-none d-md-block text-start" style="left: 150px; padding: 120px 0;">
        <a href="http://localhost:10008/men/" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Order now!</a>
     </div>
     </div>
     <div class="carousel-item">
-	<img src="<?php echo get_template_directory_uri();?>/img/slider_3.png" class="d-block w-100" alt="...">
+	<img src="<?php echo get_template_directory_uri();?>/img/slider-3.png" class="d-block w-100" alt="...">
   <div class="carousel-caption d-none d-md-block text-start" style="left: 150px; padding: 120px 0;">
        <a href="http://localhost:10008/men/" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Order now!</a>
     </div>
@@ -55,13 +55,33 @@ get_header();
 </div>
 </section>
 
+<section class="container-fluid bg-primary text-white pt-4 pb-4">
+  <div class="row">
+  <div class="thumbnail col text-center"> 
+  <img src="/img/deborah-rainford-yISrQEZjF8s-unsplash.jpg" alt="" class="rounded float-start">
+        <div class="caption">
+        <h2 class="shop-section_heading">hemgjorda äppelpajer</h2>
+        </div>
+  </div>
+  <div class="col">
+  <p class="shop-section_body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+  </p>
+
+  </div>
+
+  </div>
+</section>
+
 <section class="container popular-products">
 <h1 class="text-center pt-5">Categories</h1>
 <p class="text-center">We offer a number of high quality food!</p>
 
-<div class="pt-5 pb-5">
+<div class="pt-4 pb-4">
 
-<?php echo do_shortcode( '[product_categories columns=4 limted=4]' ); ?>
+<?php echo do_shortcode( '[product_categories limit="4" orderbyid="id" order="DESC"]' ); ?>
 </div>
 </section>
 

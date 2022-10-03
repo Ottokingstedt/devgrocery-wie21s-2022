@@ -8,12 +8,11 @@ $theme-colors: (
   "primary": $primary,
   "primary-opacity-8": $primary-opacity-8,
   "gray": $gray,
-  "sale": $sale
 );
 
 // Create your own map
 $custom-color: (
-  "icon-background": rgba(24, 127, 105, 0.2)
+  "icon-background": rgba(224, 255, 248, 0.2)
 );
 
 // Merge maps
@@ -39,17 +38,34 @@ $utilities: (
 // Then add additional custom code here
 
 
+// /* Woo Search */
 
 .site-header{
-.aws-search-field {
-font-size: 0.9rem;
-padding-left: 1.4rem;
-border-radius: 20px!important;
-  }
-.aws_result_link{
-    padding-left: 1.4rem;
-    border-radius: 20px!important;
-  }
+  .aws-container .aws-search-form .aws-form-btn {
+    background: #fff;
+    border-color: #4498c6;
+}
+.aws-container .aws-search-form .aws-search-btn.aws-form-btn {
+    background: #4498c6;
+}
+.aws-container .aws-search-form .aws-search-btn svg {
+    fill: #fff;
+}
+.aws-container .aws-search-field {
+    border-right: none !important;
+    border-color: #fff;
+}
+.aws-container .aws-search-form .aws-main-filter.aws-form-btn {
+    border-left: none !important;
+}
+.aws-container .aws-search-field {
+    border-top-left-radius: 10px !important;
+    border-bottom-left-radius: 10px !important;
+}
+.aws-container .aws-search-form .aws-search-btn.aws-form-btn {
+    border-top-right-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+}
 }
 
 /* Main Menu */
@@ -75,4 +91,30 @@ a:hover {
     border: none;
 }
 
+// .thumbnail {
+//   position: relative;
+// }
+
+// .caption {
+//   position: absolute;
+//   top: 45%;
+//   left: 0;
+//   width: 100%;
+// }
+
+.page-hero{
+  display: grid;
+  height: 60vh;
+  background-color: #BFC7C7;
+  background-image: cover;
+  background-position: center;
+  align-items: center;
+  color: #fff;
+
+  
 }
+
+
+}
+
+

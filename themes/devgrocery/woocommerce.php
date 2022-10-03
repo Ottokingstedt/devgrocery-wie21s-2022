@@ -1,6 +1,9 @@
-<?php get_header(); ?>
-
-<main class="container">
+<?php get_header(); 
+/**
+ * Add to woocommerce page 
+ */
+?>
+<main class="container"
     <?php woocommerce_content(); ?>
 </main>
 

@@ -1,0 +1,12 @@
+2022-10-01T15:30:36+00:00 CRITICAL syntax error, unexpected '}' in /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/themes/devgrocery/functions.php on line 227
+
+2022-10-01T15:30:38+00:00 CRITICAL syntax error, unexpected '}' in /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/themes/devgrocery/functions.php on line 227
+
+2022-10-01T15:30:38+00:00 CRITICAL syntax error, unexpected '}' in /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/themes/devgrocery/functions.php on line 227
+
+2022-10-01T15:30:52+00:00 CRITICAL syntax error, unexpected '}' in /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/themes/devgrocery/functions.php on line 227
+
+2022-10-01T15:32:00+00:00 CRITICAL Cannot redeclare aws_get_search_form() (previously declared in /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/plugins/advanced-woo-search/advanced-woo-search.php:345) in /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/themes/devgrocery/functions.php on line 225
+
+2022-10-01T15:32:00+00:00 CRITICAL Cannot redeclare aws_get_search_form() (previously declared in /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/plugins/advanced-woo-search/advanced-woo-search.php:345) in /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/themes/devgrocery/functions.php on line 225
+

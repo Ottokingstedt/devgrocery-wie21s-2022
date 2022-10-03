@@ -1,5 +1,5 @@
-const myCarouselEl = document.querySelector('#carouselExampleDark')
-const carousel = bootstrap.Carousel.getInstance(myCarouselEl) // Retrieve a Carousel instance
+const myCarouselEl = document.querySelector('#carouselExampleDark');
+const carousel = bootstrap.Carousel.getInstance(myCarouselEl); // Retrieve a Carousel instance
 
 myCarouselEl.addEventListener('slid.bs.carousel', event => {
   carousel.to('2') // Will slide to the slide 2 as soon as the transition to slide 1 is finished

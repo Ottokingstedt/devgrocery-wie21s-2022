@@ -79,14 +79,35 @@
 				</div>
 
 
-				<div class="col-sm-12 col-md-5">
-					<?php if (function_exists ( 'aws_get_search_form' ) ) { aws_get_search_form(); } ?> 
+				<div class="col-sm-12 col-md-5"> 
+					<?php if (function_exists ( 'aws_get_search_form' ) ) { aws_get_search_form(); } 
+					?>
 				</div>
 
-				<div class="col cart d-flex justify-content-end align-items-center pt-2">
-				<a href="<?php echo wc_get_cart_url(); ?>"><i class="bi bi-bag-dash p-2"></i></a>
+				<div class="site_cart col cart d-flex justify-content-end align-items-center pt-2">
+				<a class="cart-icon" href="<?php echo wc_get_cart_url(); ?>"><i class="bi bi-cart3 p-3"></i></a>
 				<a class="cart-customlocation" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><?php echo sprintf ( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?> –
 				<?php echo WC()->cart->get_cart_total(); ?></a>
+				<style>
+						.site_cart{
+							border: 2px solid white;
+							border-radius: 20px;
+							width: auto;
+							padding: 10px auto;
+							justify-content: center !important;
+						}
+
+						.cart-icon{
+							color: white !important;
+							padding: 4px;
+							height: 30px;
+							width: auto;
+						}
+						.cart-customlocation{
+								color: white !important;
+							}
+
+					</style>
 				</div>
 			</div>
 		</div>
