@@ -3,7 +3,7 @@
  * Add to woocommerce page 
  */
 ?>
-<main class="container"
+<main class="container">
     <?php woocommerce_content(); ?>
 </main>
 

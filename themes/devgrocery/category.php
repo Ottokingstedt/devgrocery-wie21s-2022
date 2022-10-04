@@ -41,8 +41,8 @@ get_header(); ?>
          */
         get_template_part('content', get_post_format());
     endwhile;
-    
-		
+    ?>
+		<?php endif ?>
 	</section><!-- #primary -->
 
 <?php get_footer();

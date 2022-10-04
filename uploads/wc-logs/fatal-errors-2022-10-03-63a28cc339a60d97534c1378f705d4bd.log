@@ -6,3 +6,7 @@ Stack trace:
 #3 {main}
   thrown in /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/themes/devgrocery/page.php on line 10
 
+2022-10-03T20:27:48+00:00 CRITICAL syntax error, unexpected '}' in /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/themes/devgrocery/functions.php on line 329
+
+2022-10-03T20:29:49+00:00 CRITICAL syntax error, unexpected '}' in /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/themes/devgrocery/functions.php on line 333
+

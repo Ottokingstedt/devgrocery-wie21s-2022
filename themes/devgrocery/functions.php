@@ -256,21 +256,21 @@ if (class_exists('WooCommerce')) {
 	add_action('after_setup_theme', 'woocommerceshop_add_woocommerce_support');
 
 // Remove WooCommerce Styles
-function remove_woocommerce_styles($enqueue_styles)
-{
-    unset($enqueue_styles['woocommerce-general']); // Remove the gloss
+// function remove_woocommerce_styles($enqueue_styles)
+//{
+  //  unset($enqueue_styles['woocommerce-general']); // Remove the gloss
     // unset( $enqueue_styles['woocommerce-layout'] );		// Remove the layout
     // unset( $enqueue_styles['woocommerce-smallscreen'] );	// Remove the smallscreen optimisation
-    return $enqueue_styles;
-}
+//    return $enqueue_styles;
+//}
 
 
 	// Add support
 	add_theme_support('wc-product-gallery-zoom');
 	add_theme_support('wc-product-gallery-light');
 	add_theme_support('wc-product-gallery-slider');
-}
 
+}
 add_action('admin_post_nopriv_contact_form', 'process_contact_form');
 
 add_action('admin_post_contact_form', 'process_contact_form');
@@ -339,4 +339,64 @@ function submitsForm($table_name, $params)
     }
 }
 
-/*DYNAMIC 404 ERROR PAGE WITH WIDGET AREAS # */
+
+/** Custom Post Type */
+
+// Register Custom Post Type
+function custom_post_type() {
+
+	$labels = array(
+		'name'                  => _x( 'Testimonials', 'Post Type General Name', 'Devgrocery' ),
+		'singular_name'         => _x( 'Testimonial', 'Post Type Singular Name', 'Devgrocery' ),
+	);
+	$args = array(
+		'label'                 => __( 'Testimonial', 'Devgrocery' ),
+		'description'           => __( 'Post Type Description', 'Devgrocery' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'thumbnail' ),
+		'taxonomies'            => array( 'category', 'post_tag' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'menu_icon'             => 'dashicons-smiley',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page',
+	);
+	register_post_type( 'testimonials', $args );
+
+}
+add_action( 'init', 'custom_post_type', 0 );
+
+/**
+ * Register a new post type for testimonials and ACF pro 
+ */
+
+ add_action('acf/init', 'my_acf_init_block_types');
+ function my_acf_init_block_types(){
+
+	//Check function exists
+if (function_exists('acf_register_block_type')){
+
+	//register a testimonial block.
+	acf_register_block_type(array(
+		'name'				=> 'testimonials',
+		'title'				=> __('Testimonials'),
+		'description'		=> __('A custom testimonial block.'),
+		'render_template'	=> 'template-parts/blocks/testimonials.php',
+		'category'			=> 'formatting',
+		'icon'				=> 'dashicons-smiley',
+		'keywords'			=> array('testimonials'),
+	));
+	}
+ }
+
+ if (function_exists('acf_add_options_page')) {
+	acf_add_options_page();
+ }
