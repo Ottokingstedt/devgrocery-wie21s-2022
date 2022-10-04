@@ -12,7 +12,11 @@ if (!defined('_S_VERSION')) {
 
 function wp_add_google_fonts()
 {
-	wp_enqueue_style('wpb-google-fonts', 'https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Montserrat&display=swap', false);
+    wp_enqueue_style(
+        'wpb-google-fonts',
+        'https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Montserrat&display=swap',
+        false
+    );
 }
 add_action('wp_enqueue_scripts', 'wp_add_google_fonts');
 
@@ -48,50 +52,41 @@ function devgrocery_setup()
 		)
 	);
 
-	/*
-		* Switch default core markup for search form, comment form, and comments
-		* to output valid HTML5.
-		*/
-	add_theme_support(
-		'html5',
-		array(
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-			'style',
-			'script',
-		)
-	);
+    /*
+     * Switch default core markup for search form, comment form, and comments
+     * to output valid HTML5.
+     */
+    add_theme_support('html5', [
+        'search-form',
+        'comment-form',
+        'comment-list',
+        'gallery',
+        'caption',
+        'style',
+        'script',
+    ]);
 
-	// Set up the WordPress core custom background feature.
-	add_theme_support(
-		'custom-background',
-		apply_filters(
-			'devgrocery_custom_background_args',
-			array(
-				'default-color' => 'ffffff',
-				'default-image' => '',
-			)
-		)
-	);
+    // Set up the WordPress core custom background feature.
+    add_theme_support(
+        'custom-background',
+        apply_filters('devgrocery_custom_background_args', [
+            'default-color' => 'ffffff',
+            'default-image' => '',
+        ])
+    );
 
 	// Add theme support for selective refresh for widgets.
 	add_theme_support('customize-selective-refresh-widgets');
 
-	/**
-	 * Add support for core custom logo.
-	 */
-	add_theme_support(
-		'custom-logo',
-		array(
-			'height'      => 250,
-			'width'       => 250,
-			'flex-width'  => true,
-			'flex-height' => true,
-		)
-	);
+    /**
+     * Add support for core custom logo.
+     */
+    add_theme_support('custom-logo', [
+        'height' => 250,
+        'width' => 250,
+        'flex-width' => true,
+        'flex-height' => true,
+    ]);
 }
 add_action('after_setup_theme', 'devgrocery_setup');
 
@@ -152,25 +147,24 @@ function random_number_function()
 
 add_action('random_number', 'random_number_function');
 
-
 add_filter('wc_product_sku_enabled', 'woocustomizer_remove_product_sku');
 
 function woocustomizer_remove_product_sku($sku)
 {
 	return false;
 }
-// hook in 
+// hook in
 add_filter('wooecommerce_checkout_fields', 'custom_override_checkout_fields');
 
 function custom_override_checkout_fields($fields)
 {
-
-	$fields['billing']['billing_company']['label'] = "Company Name or Last Name";
+    $fields['billing']['billing_company']['label'] =
+        'Company Name or Last Name';
 
 	return $fields;
 }
 
-// coupon 
+// coupon
 
 add_action('woocommerce_before_cart', 'add_coupon_notice');
 function add_coupon_notice()
@@ -186,24 +180,32 @@ function add_coupon_notice()
 
 	wc_clear_notices();
 
-	if ($cart_total < $minimum_amount) {
-		WC()->cart->remove_coupon('Godevfood2022');
-		wc_print_notice("Shopping for" . $minimum_amount - $cart_total . "because it gets 25% discount!");
-	} else {
-		WC()->cart->apply_coupon('Godevfood2022');
-		wc_print_notice("You got 25% discounts");
-	}
+    if ($cart_total < $minimum_amount) {
+        WC()->cart->remove_coupon('Godevfood2022');
+        wc_print_notice(
+            'Shopping for' .
+                $minimum_amount -
+                $cart_total .
+                'because it gets 25% discount!'
+        );
+    } else {
+        WC()->cart->apply_coupon('Godevfood2022');
+        wc_print_notice('You got 25% discounts');
+    }
 
 	wc_clear_notices();
 }
 
-add_action('woocommerce_before_single_product_summary', 'add_product_designer', 1);
+add_action(
+    'woocommerce_before_single_product_summary',
+    'add_product_designer',
+    1
+);
 function add_product_designer()
 {
 	//  echo "<h3>";
 	echo get_field('designer');
 }
-
 
 /*  WooCommerce
  */
@@ -253,6 +255,14 @@ if (class_exists('WooCommerce')) {
 	}
 	add_action('after_setup_theme', 'woocommerceshop_add_woocommerce_support');
 
+// Remove WooCommerce Styles
+function remove_woocommerce_styles($enqueue_styles)
+{
+    unset($enqueue_styles['woocommerce-general']); // Remove the gloss
+    // unset( $enqueue_styles['woocommerce-layout'] );		// Remove the layout
+    // unset( $enqueue_styles['woocommerce-smallscreen'] );	// Remove the smallscreen optimisation
+    return $enqueue_styles;
+}
 
 
 	// Add support
@@ -260,60 +270,73 @@ if (class_exists('WooCommerce')) {
 	add_theme_support('wc-product-gallery-light');
 	add_theme_support('wc-product-gallery-slider');
 }
+
 add_action('admin_post_nopriv_contact_form', 'process_contact_form');
 
 add_action('admin_post_contact_form', 'process_contact_form');
 
 function process_contact_form()
 {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        global $wpdb;
 
-	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-		global $wpdb;
+        $params = $_POST;
 
-		$params = $_POST;
+        $params['contact_full_name'] = preg_replace(
+            '/[^a-zA-Z ]+/',
+            '',
+            filter_var(
+                strip_tags($params['contact_full_name']),
+                FILTER_SANITIZE_STRING
+            )
+        );
+        $params['contact_email'] = filter_var(
+            strip_tags($params['contact_email']),
+            FILTER_SANITIZE_EMAIL
+        );
 
-		$params['contact_full_name'] = preg_replace("/[^a-zA-Z ]+/", "", filter_var(strip_tags($params['contact_full_name']), FILTER_SANITIZE_STRING));
-		$params['contact_email'] = filter_var(strip_tags($params['contact_email']), FILTER_SANITIZE_EMAIL);
+        /*create table if not exists*/
 
-		/*create table if not exists*/
+        $table_name = $wpdb->prefix . 'custom_contact_form';
 
-		$table_name = $wpdb->prefix . 'custom_contact_form';
+        $query = $wpdb->prepare(
+            'SHOW TABLES LIKE %s',
+            $wpdb->esc_like($table_name)
+        );
 
-		$query = $wpdb->prepare('SHOW TABLES LIKE %s', $wpdb->esc_like($table_name));
-
-		if (!$wpdb->get_var($query) == $table_name) {
-
-			$sql = "CREATE TABLE {$table_name} (
+        if (!$wpdb->get_var($query) == $table_name) {
+            $sql = "CREATE TABLE {$table_name} (
 		id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 		contact_full_name VARCHAR(255) NOT NULL,
 		contact_email VARCHAR(255) NOT NULL,
 		created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 	)";
 
-			if ($wpdb->query($sql)) {
-				submitsForm($table_name, $params);
-			}
-		} else {
-		}
+            if ($wpdb->query($sql)) {
+                submitsForm($table_name, $params);
+            }
+        } else {
+        }
 
-		/*create table if not exists*/
+        /*create table if not exists*/
 
-		die;
-	}
+        die();
+    }
 }
-/* Contact Form Function */
+/* ------Contact Form Function ---------- */
 function submitsForm($table_name, $params)
 {
+    global $wpdb;
 
-	global $wpdb;
+    $curTime = date('Y-m-d H:i:s');
 
-	$curTime = date('Y-m-d H:i:s');
+    $query = "INSERT INTO {$table_name}(contact_full_name, contact_email,created_at) VALUES('{$params['contact_full_name']}','{$params['contact_email']}','{$curTime}')";
 
-	$query = "INSERT INTO {$table_name}(contact_full_name, contact_email,created_at) VALUES('{$params['contact_full_name']}','{$params['contact_email']}','{$curTime}')";
-
-	if ($wpdb->query($query)) {
-		wp_redirect($params['base_page'] . '?success=1');
-	} else {
-		wp_redirect($params['base_page'] . '?error=1');
-	}
+    if ($wpdb->query($query)) {
+        wp_redirect($params['base_page'] . '?success=1');
+    } else {
+        wp_redirect($params['base_page'] . '?error=1');
+    }
 }
+
+/*DYNAMIC 404 ERROR PAGE WITH WIDGET AREAS # */
