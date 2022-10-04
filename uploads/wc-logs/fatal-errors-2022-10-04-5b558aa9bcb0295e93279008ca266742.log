@@ -88,3 +88,107 @@ Stack trace:
 #3 {main}
   thrown in /Applications/MAMP/htdocs/woocommerce-grupp10/wp-content/themes/devgrocery/page.php on line 11
 
+2022-10-04T11:59:23+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on null in /Applications/MAMP/htdocs/woocommerce-grupp10/wp-content/themes/devgrocery/page.php:11
+Stack trace:
+#0 /Applications/MAMP/htdocs/woocommerce-grupp10/wp-includes/template-loader.php(106): include()
+#1 /Applications/MAMP/htdocs/woocommerce-grupp10/wp-blog-header.php(19): require_once('/Applications/M...')
+#2 /Applications/MAMP/htdocs/woocommerce-grupp10/index.php(17): require('/Applications/M...')
+#3 {main}
+  thrown in /Applications/MAMP/htdocs/woocommerce-grupp10/wp-content/themes/devgrocery/page.php on line 11
+
+2022-10-04T12:02:32+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on null in /Applications/MAMP/htdocs/woocommerce-grupp10/wp-content/themes/devgrocery/page.php:11
+Stack trace:
+#0 /Applications/MAMP/htdocs/woocommerce-grupp10/wp-includes/template-loader.php(106): include()
+#1 /Applications/MAMP/htdocs/woocommerce-grupp10/wp-blog-header.php(19): require_once('/Applications/M...')
+#2 /Applications/MAMP/htdocs/woocommerce-grupp10/index.php(17): require('/Applications/M...')
+#3 {main}
+  thrown in /Applications/MAMP/htdocs/woocommerce-grupp10/wp-content/themes/devgrocery/page.php on line 11
+
+2022-10-04T12:10:05+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on null in /Applications/MAMP/htdocs/woocommerce-grupp10/wp-content/themes/devgrocery/page.php:11
+Stack trace:
+#0 /Applications/MAMP/htdocs/woocommerce-grupp10/wp-includes/template-loader.php(106): include()
+#1 /Applications/MAMP/htdocs/woocommerce-grupp10/wp-blog-header.php(19): require_once('/Applications/M...')
+#2 /Applications/MAMP/htdocs/woocommerce-grupp10/index.php(17): require('/Applications/M...')
+#3 {main}
+  thrown in /Applications/MAMP/htdocs/woocommerce-grupp10/wp-content/themes/devgrocery/page.php on line 11
+
+2022-10-04T12:11:39+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on null in /Applications/MAMP/htdocs/woocommerce-grupp10/wp-content/themes/devgrocery/page.php:11
+Stack trace:
+#0 /Applications/MAMP/htdocs/woocommerce-grupp10/wp-includes/template-loader.php(106): include()
+#1 /Applications/MAMP/htdocs/woocommerce-grupp10/wp-blog-header.php(19): require_once('/Applications/M...')
+#2 /Applications/MAMP/htdocs/woocommerce-grupp10/index.php(17): require('/Applications/M...')
+#3 {main}
+  thrown in /Applications/MAMP/htdocs/woocommerce-grupp10/wp-content/themes/devgrocery/page.php on line 11
+
+2022-10-04T12:11:55+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on null in /Applications/MAMP/htdocs/woocommerce-grupp10/wp-content/themes/devgrocery/page.php:11
+Stack trace:
+#0 /Applications/MAMP/htdocs/woocommerce-grupp10/wp-includes/template-loader.php(106): include()
+#1 /Applications/MAMP/htdocs/woocommerce-grupp10/wp-blog-header.php(19): require_once('/Applications/M...')
+#2 /Applications/MAMP/htdocs/woocommerce-grupp10/index.php(17): require('/Applications/M...')
+#3 {main}
+  thrown in /Applications/MAMP/htdocs/woocommerce-grupp10/wp-content/themes/devgrocery/page.php on line 11
+
+2022-10-04T12:23:40+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on null in /Applications/MAMP/htdocs/woocommerce-grupp10/wp-content/themes/devgrocery/page.php:11
+Stack trace:
+#0 /Applications/MAMP/htdocs/woocommerce-grupp10/wp-includes/template-loader.php(106): include()
+#1 /Applications/MAMP/htdocs/woocommerce-grupp10/wp-blog-header.php(19): require_once('/Applications/M...')
+#2 /Applications/MAMP/htdocs/woocommerce-grupp10/index.php(17): require('/Applications/M...')
+#3 {main}
+  thrown in /Applications/MAMP/htdocs/woocommerce-grupp10/wp-content/themes/devgrocery/page.php on line 11
+
+2022-10-04T12:24:46+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on null in /Applications/MAMP/htdocs/woocommerce-grupp10/wp-content/themes/devgrocery/page.php:11
+Stack trace:
+#0 /Applications/MAMP/htdocs/woocommerce-grupp10/wp-includes/template-loader.php(106): include()
+#1 /Applications/MAMP/htdocs/woocommerce-grupp10/wp-blog-header.php(19): require_once('/Applications/M...')
+#2 /Applications/MAMP/htdocs/woocommerce-grupp10/index.php(17): require('/Applications/M...')
+#3 {main}
+  thrown in /Applications/MAMP/htdocs/woocommerce-grupp10/wp-content/themes/devgrocery/page.php on line 11
+
+2022-10-04T12:25:56+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on null in /Applications/MAMP/htdocs/woocommerce-grupp10/wp-content/themes/devgrocery/page.php:11
+Stack trace:
+#0 /Applications/MAMP/htdocs/woocommerce-grupp10/wp-includes/template-loader.php(106): include()
+#1 /Applications/MAMP/htdocs/woocommerce-grupp10/wp-blog-header.php(19): require_once('/Applications/M...')
+#2 /Applications/MAMP/htdocs/woocommerce-grupp10/index.php(17): require('/Applications/M...')
+#3 {main}
+  thrown in /Applications/MAMP/htdocs/woocommerce-grupp10/wp-content/themes/devgrocery/page.php on line 11
+
+2022-10-04T12:28:33+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on null in /Applications/MAMP/htdocs/woocommerce-grupp10/wp-content/themes/devgrocery/page.php:11
+Stack trace:
+#0 /Applications/MAMP/htdocs/woocommerce-grupp10/wp-includes/template-loader.php(106): include()
+#1 /Applications/MAMP/htdocs/woocommerce-grupp10/wp-blog-header.php(19): require_once('/Applications/M...')
+#2 /Applications/MAMP/htdocs/woocommerce-grupp10/index.php(17): require('/Applications/M...')
+#3 {main}
+  thrown in /Applications/MAMP/htdocs/woocommerce-grupp10/wp-content/themes/devgrocery/page.php on line 11
+
+2022-10-04T12:28:37+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on null in /Applications/MAMP/htdocs/woocommerce-grupp10/wp-content/themes/devgrocery/page.php:11
+Stack trace:
+#0 /Applications/MAMP/htdocs/woocommerce-grupp10/wp-includes/template-loader.php(106): include()
+#1 /Applications/MAMP/htdocs/woocommerce-grupp10/wp-blog-header.php(19): require_once('/Applications/M...')
+#2 /Applications/MAMP/htdocs/woocommerce-grupp10/index.php(17): require('/Applications/M...')
+#3 {main}
+  thrown in /Applications/MAMP/htdocs/woocommerce-grupp10/wp-content/themes/devgrocery/page.php on line 11
+
+2022-10-04T12:28:56+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on null in /Applications/MAMP/htdocs/woocommerce-grupp10/wp-content/themes/devgrocery/page.php:11
+Stack trace:
+#0 /Applications/MAMP/htdocs/woocommerce-grupp10/wp-includes/template-loader.php(106): include()
+#1 /Applications/MAMP/htdocs/woocommerce-grupp10/wp-blog-header.php(19): require_once('/Applications/M...')
+#2 /Applications/MAMP/htdocs/woocommerce-grupp10/index.php(17): require('/Applications/M...')
+#3 {main}
+  thrown in /Applications/MAMP/htdocs/woocommerce-grupp10/wp-content/themes/devgrocery/page.php on line 11
+
+2022-10-04T12:29:55+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on null in /Applications/MAMP/htdocs/woocommerce-grupp10/wp-content/themes/devgrocery/page.php:11
+Stack trace:
+#0 /Applications/MAMP/htdocs/woocommerce-grupp10/wp-includes/template-loader.php(106): include()
+#1 /Applications/MAMP/htdocs/woocommerce-grupp10/wp-blog-header.php(19): require_once('/Applications/M...')
+#2 /Applications/MAMP/htdocs/woocommerce-grupp10/index.php(17): require('/Applications/M...')
+#3 {main}
+  thrown in /Applications/MAMP/htdocs/woocommerce-grupp10/wp-content/themes/devgrocery/page.php on line 11
+
+2022-10-04T12:53:30+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on null in /Applications/MAMP/htdocs/woocommerce-grupp10/wp-content/themes/devgrocery/page.php:11
+Stack trace:
+#0 /Applications/MAMP/htdocs/woocommerce-grupp10/wp-includes/template-loader.php(106): include()
+#1 /Applications/MAMP/htdocs/woocommerce-grupp10/wp-blog-header.php(19): require_once('/Applications/M...')
+#2 /Applications/MAMP/htdocs/woocommerce-grupp10/index.php(17): require('/Applications/M...')
+#3 {main}
+  thrown in /Applications/MAMP/htdocs/woocommerce-grupp10/wp-content/themes/devgrocery/page.php on line 11
+

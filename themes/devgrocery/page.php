@@ -44,6 +44,8 @@ if(have_posts()){
 
 <?php the_excerpt(); ?>
 
+<?php the_content(); ?>
+
 </div>
 </div>
 
