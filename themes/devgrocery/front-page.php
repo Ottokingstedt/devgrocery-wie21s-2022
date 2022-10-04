@@ -12,8 +12,7 @@
  * @package devgrocery
  */
 
-get_header();
-?>
+get_header(); ?>
 
 	<main id="primary" class="site-main">
 		
@@ -26,19 +25,19 @@ get_header();
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active" data-bs-interval="10000">
-      <img src="<?php echo get_template_directory_uri();?>/img/family.jpg" class="d-block w-100" alt="...">
+      <img src="<?php echo get_template_directory_uri(); ?>/img/family.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block text-start" style="left: 150px; padding: 90px 0;">
        <a href="http://localhost:10008/men/" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Order now!</a>
       </div>
     </div>
     <div class="carousel-item" data-bs-interval="2000">
-	<img src="<?php echo get_template_directory_uri();?>/img/slider_2.png" class="d-block w-100" alt="...">
+	<img src="<?php echo get_template_directory_uri(); ?>/img/slider_2.png" class="d-block w-100" alt="...">
   <div class="carousel-caption d-none d-md-block text-start" style="left: 150px; padding: 120px 0;">
        <a href="http://localhost:10008/men/" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Order now!</a>
     </div>
     </div>
     <div class="carousel-item">
-	<img src="<?php echo get_template_directory_uri();?>/img/slider_3.png" class="d-block w-100" alt="...">
+	<img src="<?php echo get_template_directory_uri(); ?>/img/slider_3.png" class="d-block w-100" alt="...">
   <div class="carousel-caption d-none d-md-block text-start" style="left: 150px; padding: 120px 0;">
        <a href="http://localhost:10008/men/" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Order now!</a>
     </div>
@@ -61,46 +60,48 @@ get_header();
 
 <div class="pt-5 pb-5">
 
-<?php echo do_shortcode( '[product_categories columns=4 limted=4]' ); ?>
+<?php echo do_shortcode('[product_categories columns=4 limted=4]'); ?>
 </div>
 </section>
 
 <section class="container pt-5 pt-5">
 <h1 class="text-center pt-5">News</h1>
 
-<?php 
-$args = array(
-
-'post_type' => 'post',
-
-);
+<?php
+$args = [
+    'post_type' => 'post',
+];
 $_posts = new WP_Query($args);
 ?>
 
-<?php if($_posts->have_posts()):?>
+<?php if ($_posts->have_posts()): ?>
 
   <div class="row">
 
-  <?php while ($_posts->have_posts()): $_posts->the_post();?>
+  <?php while ($_posts->have_posts()):
+      $_posts->the_post(); ?>
 
   <div class="col-lg-4">
 
-  <?php if(has_post_thumbnail()):?>
+  <?php if (has_post_thumbnail()): ?>
 
-    <img src="<?php the_post_thumbnail_url('small_image');?>" class="img-fluid mb-2 alt="<?php the_title();?>">
+    <img src="<?php the_post_thumbnail_url(
+        'small_image'
+    ); ?>" class="img-fluid mb-2 alt="<?php the_title(); ?>">
 
-    <?php endif;?>
+    <?php endif; ?>
   
-  <a href="<?php the_permalink();?>">
-  <h3><?php the_title();?></h3>
+  <a href="<?php the_permalink(); ?>">
+  <h3><?php the_title(); ?></h3>
   </a>
 
-  <?php the_excerpt();?>
+  <?php the_excerpt(); ?>
 
 
   </div>
 
-  <?php endwhile; ?>
+  <?php
+  endwhile; ?>
   
   </div>
   <?php endif; ?>
@@ -111,4 +112,6 @@ $_posts = new WP_Query($args);
 	</main><!-- #main -->
 
 <?php
+wp_list_categories();
 get_footer();
+
