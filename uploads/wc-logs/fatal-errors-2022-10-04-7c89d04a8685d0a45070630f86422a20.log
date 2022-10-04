@@ -1,0 +1,4 @@
+2022-10-04T22:40:06+00:00 CRITICAL syntax error, unexpected 'function' (T_FUNCTION) in /Applications/MAMP/htdocs/woo-grupp10/wp-content/themes/devgrocery/functions.php on line 384
+
+2022-10-04T22:40:26+00:00 CRITICAL syntax error, unexpected ';', expecting '{' in /Applications/MAMP/htdocs/woo-grupp10/wp-content/themes/devgrocery/functions.php on line 376
+

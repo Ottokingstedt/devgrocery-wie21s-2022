@@ -3,33 +3,40 @@
  * @package devgrocery
  */
 
-get_header();
-?>
+get_header(); ?>
+
 	<main id="primary" class="site-main">
 
-		<?php
-	
-			/* Start the Loop */
-			 while ( have_posts() ) :
-				the_post(); ?>
+		<!----Posts---->
+		<div class="container">
+        <div class="row">
+        <div class="new-cal">
+              <?php if (have_posts()): ?>
 
-				get_template_part( 'template-parts/content', get_post_type() ); ?>
-						<article class="post">
-
-							<h2><a href="<?php the_permalink(); ?>"> <?php the_title(); ?></a></h2>
-							
-							<?php the_content(); ?>
-                        
-                      	</article>
-						
-			<?php endwhile; ?>
-
-			<?php the_posts_navigation(); ?>
-
-		<?php else : ?>
-
-			<?php echo do_shortcode('[sp_testimonials_slider]'); ?> 
-
+                <?php while (have_posts()):
+                    the_post(); ?>
+                    <article class="post">
+                        <h3>
+                        <a href="<?php the_permalink(); ?>"> <?php the_title(); ?></a></h3>
+                        <?php if (has_post_thumbnail()): ?>
+							<div class="post-thumbnail">
+								<?php the_post_thumbnail(); ?>
+							</div>
+							<?php endif; ?>
+							<?php the_excerpt(); ?>
+                        <?php the_content(); ?>
+                        <a class="button" href="<?php the_permalink(); ?>"> Läs mer</a>
+                      
+                    </article>
+                <?php
+                endwhile; ?>
+                <?php else: ?>
+                <?php echo wpautop('Sorry, no posts were found'); ?>
+                <?php endif; ?>
+        </div>
+       
+        </div>
+    </div>
 		
 
 	</main><!-- #main -->
@@ -37,3 +44,4 @@ get_header();
 <?php
 get_sidebar();
 get_footer();
+
