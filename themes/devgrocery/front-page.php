@@ -31,13 +31,13 @@ get_header(); ?>
       </div>
     </div>
     <div class="carousel-item" data-bs-interval="2000">
-	<img src="<?php echo get_template_directory_uri();?>/img/slider-2.png" class="d-block w-100" alt="...">
+	<img src="<?php echo get_template_directory_uri(); ?>/img/slider-2.png" class="d-block w-100" alt="...">
   <div class="carousel-caption d-none d-md-block text-start" style="left: 150px; padding: 120px 0;">
        <a href="http://localhost:10008/men/" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Order now!</a>
     </div>
     </div>
     <div class="carousel-item">
-	<img src="<?php echo get_template_directory_uri();?>/img/slider-3.png" class="d-block w-100" alt="...">
+	<img src="<?php echo get_template_directory_uri(); ?>/img/slider-3.png" class="d-block w-100" alt="...">
   <div class="carousel-caption d-none d-md-block text-start" style="left: 150px; padding: 120px 0;">
        <a href="http://localhost:10008/men/" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Order now!</a>
     </div>
@@ -80,12 +80,15 @@ get_header(); ?>
 
 <div class="pt-4 pb-4">
 
-<?php echo do_shortcode( '[product_categories limit="4" orderbyid="id" order="DESC"]' ); ?>
+<?php echo do_shortcode(
+    '[product_categories limit="4" orderbyid="id" order="DESC"]'
+); ?>
 </div>
 </section>
 
 <section class="container pt-5 pt-5">
 <h1 class="text-center pt-5">News</h1>
+<hr>
 
 <?php
 $args = [
@@ -111,12 +114,12 @@ $_posts = new WP_Query($args);
 
     <?php endif; ?>
   
-  <a href="<?php the_permalink(); ?>">
+
   <h3><?php the_title(); ?></h3>
   </a>
 
   <?php the_excerpt(); ?>
-
+  <a class="button-news" href="<?php the_permalink(); ?>">Läs mer</a>
 
   </div>
 

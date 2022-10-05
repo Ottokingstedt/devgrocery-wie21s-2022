@@ -1061,3 +1061,15 @@ footer {
   height: 353px;
   border-radius: 15px;
 }
+.button-news {
+  cursor: pointer;
+  border: 0;
+  text-decoration: none;
+  color: rgb(39, 38, 38);
+  background: rgb(176, 225, 228);
+  padding: 13px 30px;
+  border-radius: 8px;
+  font: 600 22px;
+  box-shadow: 0 0px 0 #f8f8f8;
+  transition: 0.3s;
+}

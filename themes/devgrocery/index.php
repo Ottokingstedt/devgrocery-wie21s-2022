@@ -23,9 +23,13 @@ get_header(); ?>
 								<?php the_post_thumbnail(); ?>
 							</div>
 							<?php endif; ?>
+
 							<?php the_excerpt(); ?>
-                        <?php the_content(); ?>
-                        <a class="button" href="<?php the_permalink(); ?>"> Läs mer</a>
+							<div class="content">
+							<?php the_content(); ?>
+                        		<a href="<?php the_permalink(); ?>"> Read more</a>
+							</div>
+                      
                       
                     </article>
                 <?php
