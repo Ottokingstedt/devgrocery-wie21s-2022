@@ -80,8 +80,8 @@
      } ?> 
 				</div>
 
-				<div class="col cart d-flex justify-content-end align-items-center pt-2">
-				<a href="<?php echo wc_get_cart_url(); ?>"><i class="bi bi-bag-dash p-2"></i></a>
+				<div class="site_cart col cart d-flex justify-content-end align-items-center pt-2 white">
+				<a href="<?php echo wc_get_cart_url(); ?>"><i class="bi bi-cart-fill p-2 icon-white"></i></a>
 				<a class="cart-customlocation" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e(
     'View your shopping cart'
 ); ?>"><?php echo sprintf(
@@ -89,26 +89,6 @@
     WC()->cart->get_cart_contents_count()
 ); ?> –
 				<?php echo WC()->cart->get_cart_total(); ?></a>
-				<style>
-						.site_cart{
-							border: 2px solid white;
-							border-radius: 20px;
-							width: auto;
-							padding: 10px auto;
-							justify-content: center !important;
-						}
-
-						.cart-icon{
-							color: white !important;
-							padding: 4px;
-							height: 30px;
-							width: auto;
-						}
-						.cart-customlocation{
-								color: white !important;
-							}
-
-					</style>
 				</div>
 			</div>
 		</div>

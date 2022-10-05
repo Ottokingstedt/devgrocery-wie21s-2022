@@ -307,3 +307,7 @@ Stack trace:
 #4 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-includes/blocks.php(902): WP_Block->render()
 #5 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-include in /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/themes/devgrocery/template-parts/blocks/testimonials.php on line 19
 
+2022-10-04T20:54:18+00:00 CRITICAL syntax error, unexpected 'else' (T_ELSE), expecting end of file in /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/themes/devgrocery/index.php on line 29
+
+2022-10-04T21:08:40+00:00 CRITICAL syntax error, unexpected end of file in /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/themes/devgrocery/functions.php on line 410
+
