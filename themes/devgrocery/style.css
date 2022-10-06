@@ -882,12 +882,43 @@ textarea {
   width: 100%;
   margin: 0 auto;
 }
+.grid-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+}
+/* About us */
+.img-header {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.16)),
+    url("https://images.unsplash.com/photo-1545601445-5b6f418af4bf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80");
+  height: 80vh;
+  align-self: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  align-items: center;
+  justify-content: center;
+}
+.hero-text p {
+  padding-top: 3rem;
+}
+.hero-text img {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.16));
+  height: 50vh;
+  align-self: center;
+  background-repeat: no-repeat;
+}
+
 /* Contact Form  */
 .hero-img {
   display: flex;
   flex-direction: column;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("https://images.unsplash.com/photo-1604776485611-4371f7a48cc2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1198&q=80");
+
   height: 50vh;
   align-self: center;
   background-repeat: no-repeat;

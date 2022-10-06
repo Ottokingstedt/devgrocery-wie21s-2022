@@ -76,8 +76,25 @@ get_header(); ?>
 
 </form>
 </div>
+
 </div>
+
 <!-- new registeration -->
+
+<section class="container popular-products">
+	<hr>
+<h1 class="text-center pt-5">Categories</h1>
+<p class="text-center">We offer a number of high quality food!</p>
+
+<div class="pt-4 pb-4">
+
+<?php echo do_shortcode(
+    '[product_categories limit="4" orderbyid="id" order="DESC"]'
+); ?>
+
+</div>
+
+</section>
 
 <?php get_footer();
 

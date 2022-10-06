@@ -1,9 +1,14 @@
 
 <?php get_header(); ?>
+
+
 <section class="container pt-5 pt-5">
 <h1 class="text-center pt-5">News</h1>
 <hr>
-<?php
+
+
+
+<?php 
 $args = [
     'post_type' => 'post',
 ];
@@ -44,6 +49,7 @@ $_posts = new WP_Query($args);
 </div>
 
 </section>
-<?php get_footer(); ?>
+
+<?php  get_footer(); ?>
 
 
