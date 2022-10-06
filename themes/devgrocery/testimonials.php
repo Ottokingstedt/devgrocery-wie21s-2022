@@ -4,7 +4,10 @@
 get_header(); ?>
 
 
-<div id="testimonials">
+<div class="page-hero" style="background-image:url('<?php the_post_thumbnail_url( 'large' ); ?>')">
+	<div class="page-hero_heading"><h1><?php the_title();?></h1></div>
+</div>
+<div class="testimonials">
     <?php
     $args = [
         'caller_get_posts' => 1,
@@ -20,8 +23,7 @@ get_header(); ?>
             $image = get_post_meta($post->ID, 'testimonial-image', true);
             ?>
 
-        <div class="testimonail">
-            <img src="<?php echo $image; ?>" width="" height="" alt="<?php the_title(); ?>" />
+        <div class="testimonial">
             <h2><?php the_title(); ?></h2>
             <?php the_content(); ?>
         </div>

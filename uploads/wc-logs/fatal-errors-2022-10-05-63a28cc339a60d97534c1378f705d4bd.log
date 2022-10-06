@@ -1,0 +1,65 @@
+2022-10-05T23:35:37+00:00 CRITICAL Uncaught Error: Call to a member function is_on_sale() on string in /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/plugins/woocommerce/templates/single-product/sale-flash.php:25
+Stack trace:
+#0 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/plugins/woocommerce/includes/wc-core-functions.php(345): include()
+#1 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/plugins/woocommerce/includes/wc-template-functions.php(1676): wc_get_template('single-product/...')
+#2 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-includes/class-wp-hook.php(307): woocommerce_show_product_sale_flash('')
+#3 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#4 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-includes/plugin.php(476): WP_Hook->do_action(Array)
+#5 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/themes/devgrocery/content-single-product.php(43): do_action('wo in /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/plugins/woocommerce/templates/single-product/sale-flash.php on line 25
+
+2022-10-05T23:35:39+00:00 CRITICAL Uncaught Error: Call to a member function is_on_sale() on null in /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/plugins/woocommerce/templates/single-product/sale-flash.php:25
+Stack trace:
+#0 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/plugins/woocommerce/includes/wc-core-functions.php(345): include()
+#1 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/plugins/woocommerce/includes/wc-template-functions.php(1676): wc_get_template('single-product/...')
+#2 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-includes/class-wp-hook.php(307): woocommerce_show_product_sale_flash('')
+#3 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#4 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-includes/plugin.php(476): WP_Hook->do_action(Array)
+#5 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/themes/devgrocery/content-single-product.php(43): do_action('wooc in /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/plugins/woocommerce/templates/single-product/sale-flash.php on line 25
+
+2022-10-05T23:36:19+00:00 CRITICAL syntax error, unexpected '<', expecting end of file in /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/themes/devgrocery/woocommerce.php on line 31
+
+2022-10-05T23:36:26+00:00 CRITICAL Uncaught Error: Call to a member function is_on_sale() on null in /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/plugins/woocommerce/templates/single-product/sale-flash.php:25
+Stack trace:
+#0 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/plugins/woocommerce/includes/wc-core-functions.php(345): include()
+#1 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/plugins/woocommerce/includes/wc-template-functions.php(1676): wc_get_template('single-product/...')
+#2 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-includes/class-wp-hook.php(307): woocommerce_show_product_sale_flash('')
+#3 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#4 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-includes/plugin.php(476): WP_Hook->do_action(Array)
+#5 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/themes/devgrocery/content-single-product.php(43): do_action('wooc in /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/plugins/woocommerce/templates/single-product/sale-flash.php on line 25
+
+2022-10-05T23:36:31+00:00 CRITICAL Uncaught Error: Call to a member function is_on_sale() on null in /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/plugins/woocommerce/templates/single-product/sale-flash.php:25
+Stack trace:
+#0 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/plugins/woocommerce/includes/wc-core-functions.php(345): include()
+#1 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/plugins/woocommerce/includes/wc-template-functions.php(1676): wc_get_template('single-product/...')
+#2 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-includes/class-wp-hook.php(307): woocommerce_show_product_sale_flash('')
+#3 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#4 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-includes/plugin.php(476): WP_Hook->do_action(Array)
+#5 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/themes/devgrocery/content-single-product.php(43): do_action('wooc in /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/plugins/woocommerce/templates/single-product/sale-flash.php on line 25
+
+2022-10-05T23:37:00+00:00 CRITICAL Uncaught Error: Call to a member function is_on_sale() on null in /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/plugins/woocommerce/templates/single-product/sale-flash.php:25
+Stack trace:
+#0 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/plugins/woocommerce/includes/wc-core-functions.php(345): include()
+#1 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/plugins/woocommerce/includes/wc-template-functions.php(1676): wc_get_template('single-product/...')
+#2 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-includes/class-wp-hook.php(307): woocommerce_show_product_sale_flash('')
+#3 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#4 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-includes/plugin.php(476): WP_Hook->do_action(Array)
+#5 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/themes/devgrocery/content-single-product.php(43): do_action('wooc in /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/plugins/woocommerce/templates/single-product/sale-flash.php on line 25
+
+2022-10-05T23:37:02+00:00 CRITICAL Uncaught Error: Call to a member function is_on_sale() on null in /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/plugins/woocommerce/templates/single-product/sale-flash.php:25
+Stack trace:
+#0 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/plugins/woocommerce/includes/wc-core-functions.php(345): include()
+#1 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/plugins/woocommerce/includes/wc-template-functions.php(1676): wc_get_template('single-product/...')
+#2 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-includes/class-wp-hook.php(307): woocommerce_show_product_sale_flash('')
+#3 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#4 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-includes/plugin.php(476): WP_Hook->do_action(Array)
+#5 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/themes/devgrocery/content-single-product.php(43): do_action('wooc in /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/plugins/woocommerce/templates/single-product/sale-flash.php on line 25
+
+2022-10-05T23:37:04+00:00 CRITICAL Uncaught Error: Call to a member function is_on_sale() on null in /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/plugins/woocommerce/templates/single-product/sale-flash.php:25
+Stack trace:
+#0 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/plugins/woocommerce/includes/wc-core-functions.php(345): include()
+#1 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/plugins/woocommerce/includes/wc-template-functions.php(1676): wc_get_template('single-product/...')
+#2 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-includes/class-wp-hook.php(307): woocommerce_show_product_sale_flash('')
+#3 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-includes/class-wp-hook.php(331): WP_Hook->apply_filters(NULL, Array)
+#4 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-includes/plugin.php(476): WP_Hook->do_action(Array)
+#5 /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/themes/devgrocery/content-single-product.php(43): do_action('wooc in /Users/ottokingstedt/Local Sites/devgrocery/app/public/wp-content/plugins/woocommerce/templates/single-product/sale-flash.php on line 25
+
