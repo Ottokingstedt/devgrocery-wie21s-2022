@@ -133,6 +133,6 @@ $_posts = new WP_Query($args);
 	</main><!-- #main -->
 
 <?php
-wp_list_categories();
+
 get_footer();
 

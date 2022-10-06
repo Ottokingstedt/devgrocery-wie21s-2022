@@ -16,13 +16,15 @@ get_header(); ?>
     <p>Swedish Grocery Store är butiken för alla i hela välden som vill njuta av svenska smaker. <br>
          Vi skickar svenska klassiska varor till hela världen och kommer utöka med fler varor med tiden.  <br>
         För oss är bra priser samt snabba och säkra leveranser det vi eftersträvar mest.</p>
-</div>
 
+    </div>
+   
 
 <section class="container popular-products">
+
 <h1 class="text-center pt-5">Categories</h1>
 <p class="text-center">We offer a number of high quality food!</p>
-
+<hr>
 <div class="pt-4 pb-4">
 
 <?php echo do_shortcode(
