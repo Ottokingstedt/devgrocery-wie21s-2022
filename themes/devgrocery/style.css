@@ -697,7 +697,10 @@ textarea {
   clear: both;
   margin: 0 0 1.5em;
 }
-
+.row img {
+  height: 500px;
+  width: 500px;
+}
 /* Comments
 --------------------------------------------- */
 .comment-content a {
@@ -923,13 +926,21 @@ textarea {
 }
 
 .post-grid {
-  direction: ltr;
-  display: grid;
-  grid-template-columns: 50% 1fr;
-  grid-template-rows: auto;
+  width: 100%;
 }
 .post-info {
   align-self: center;
+  display: flex;
+}
+
+.post-info:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+
+.post-info-text,
+.img {
+  width: 50%;
+  padding: 3rem;
 }
 
 /* Contact Form  */

@@ -1,7 +1,7 @@
 <?php
 /*
  * Template Name: Custom Full Width
- * description: >-
+ * description: >
   Page template without sidebar
  */
 

@@ -57,9 +57,10 @@ get_header(); ?>
 <section class="container-fluid bg-primary text-white pt-4 pb-4">
   <div class="row">
   <div class="thumbnail col text-center"> 
-  <img src="/img/deborah-rainford-yISrQEZjF8s-unsplash.jpg" alt="" class="rounded float-start">
+  
+  <img src="https://images.unsplash.com/photo-1501262139015-998ac3d1e0be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80" alt="" class="rounded float-start">
         <div class="caption">
-        <h2 class="shop-section_heading">hemgjorda äppelpajer</h2>
+        <h2 class="shop-section_heading">Hemgjorda äppelpajer</h2>
         </div>
   </div>
   <div class="col">
@@ -98,16 +99,20 @@ get_header(); ?>
     while (have_posts()):
         the_post(); ?>
   <div class="post-info">
-    <h2><?php the_title(); ?></h2>
-    <p><?php the_excerpt(); ?></p>
-    <a class="button-news" href="<?php the_permalink(); ?>">Läs mer</a> 
-  </div>
+    <div class="post-info-text">
+
+      <h2><?php the_title(); ?></h2>
+      <p><?php the_excerpt(); ?></p>
+      <a class="button-news" href="<?php the_permalink(); ?>">Läs mer</a> 
+    </div>
 
   <div class="img">
   <img src="<?php the_post_thumbnail_url(
       'small_image'
   ); ?>" class="img-fluid mb-2 alt=">
   </div>
+  </div>
+
 
       <?php
     endwhile;
