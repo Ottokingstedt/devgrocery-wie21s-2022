@@ -58,6 +58,7 @@ Template Name: Contact
 <div class="hero-img">
 
 </div>
+<div id="container">
 <div class="hero-text">
     <h2>Kontakt</h2>
     <p>Curabitur sem nisl, hendrerit quis massa ut, dictum tristique libero. <br>
@@ -68,11 +69,13 @@ Template Name: Contact
         tortor ligula porta risus,<br> vel tincidunt purus tellus in odio.</p>
 </div>
 
-	<div id="container">
-		<div id="content" class="form">
+
+		<div class="container-form">
+			<div class="inner-wrap">
+		<div id="content" class="inner-form">
 			<?php the_post(); ?>
 			<div id="post-<?php the_ID(); ?>" class="post">
-				<div class="entry-content">
+				<div class="inner-wrap">
 				<form action="<?php the_permalink(); ?>" id="contactForm" method="post">
 	<ul>
 		<li>
@@ -97,6 +100,20 @@ Template Name: Contact
 			</div><!-- .post-->
 		</div><!-- #content -->
 	</div><!-- #container -->
+	</div>
+	
+	</div>
+	
+	<section class="container popular-products">
+	<hr>
+<h1 class="text-center pt-5">Categories</h1>
+<p class="text-center">We offer a number of high quality food!</p>
 
+<div class="pt-4 pb-4">
 
+<?php echo do_shortcode(
+    '[product_categories limit="4" orderbyid="id" order="DESC"]'
+); ?>
+</div>
+</section>
 <?php get_footer(); ?>
