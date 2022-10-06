@@ -8,13 +8,13 @@ get_header(); ?>
 
 <?php if (isset($_GET['success'])): ?>
 	<div class="alert alert-success">
-		<h3>Congrats! Your Form Submitted Successfully.</h3>
+		<h3>Grattis! Ditt formulär har skickats in.</h3>
 	</div>
 <?php endif; ?>
 
 <?php if (isset($_GET['error'])): ?>
 	<div class="alert alert-danger">
-		<h3>Sorry! Unable to submit the form.</h3>
+		<h3>Ojdå! Det gick inte att skicka formuläret.</h3>
 	</div>
 <?php endif; ?>
 

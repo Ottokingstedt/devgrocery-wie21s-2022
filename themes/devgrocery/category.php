@@ -14,12 +14,13 @@ get_header(); ?>
 
 			<header class="archive-header">
 				<h1 class="archive-title">
-				 /* translators: %s: Category title. */<?php
-       /* translators: %s: Category title. */
-       ?>printf(
-        __('Category Archives: %s', 'devgrocery'),
-        single_cat_title('', false)
-    ); ?>
+				 /* translators: %s: Category title. */
+                 
+                 <?php /* translators: %s: Category title. */
+     printf(
+         __('Category Archives: %s', 'devgrocery'),
+         single_cat_title('', false)
+     ); ?>
 				</h1>
 
 				<?php
@@ -32,7 +33,8 @@ get_header(); ?>
 			</header><!-- .archive-header -->
 
 				<?php // Start the Loop.
-    while (have_posts()):
+       // Start the Loop.
+       ?>while (have_posts()):
         the_post();
 
         /*
