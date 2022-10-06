@@ -9,6 +9,14 @@
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<?php if (is_page('contact')) { ?>
+	<script type="text/javascript" src="<?php bloginfo(
+     'template_directory'
+ ); ?>/js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="<?php bloginfo(
+     'template_directory'
+ ); ?>/js/verif.js"></script>
+<?php } ?>
 	<?php wp_head(); ?>
 </head>
 

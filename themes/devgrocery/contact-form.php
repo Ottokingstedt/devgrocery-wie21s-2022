@@ -1,29 +1,63 @@
 <?php
 /*
- * Template Name: Contact Form Template
- * Template Post Type: page
- */
-
-get_header(); ?>
-
-<?php if (isset($_GET['success'])): ?>
-	<div class="alert alert-success">
-		<h3>Grattis! Ditt formulär har skickats in.</h3>
-	</div>
-<?php endif; ?>
-
-<?php if (isset($_GET['error'])): ?>
-	<div class="alert alert-danger">
-		<h3>Ojdå! Det gick inte att skicka formuläret.</h3>
-	</div>
-<?php endif; ?>
-
-
-   
+Template Name: Contact
+*/
+?>
+<?php if (isset($_POST['submitted'])) {
+    if (trim($_POST['contactName']) === '') {
+        $nameError = 'Please enter your name.';
+        $hasError = true;
+    } else {
+        $name = trim($_POST['contactName']);
+    }
+    if (trim($_POST['email']) === '') {
+        $emailError = 'Please enter your email address.';
+        $hasError = true;
+    } elseif (
+        !preg_match(
+            '/^[[:alnum:]][a-z0-9_.-]*@[a-z0-9.-]+\.[a-z]{2,4}$/i',
+            trim($_POST['email'])
+        )
+    ) {
+        $emailError = 'You entered an invalid email address.';
+        $hasError = true;
+    } else {
+        $email = trim($_POST['email']);
+    }
+    if (trim($_POST['comments']) === '') {
+        $commentError = 'Please enter a message.';
+        $hasError = true;
+    } else {
+        if (function_exists('stripslashes')) {
+            $comments = stripslashes(trim($_POST['comments']));
+        } else {
+            $comments = trim($_POST['comments']);
+        }
+    }
+    if (!isset($hasError)) {
+        $emailTo = get_option('tz_email');
+        if (!isset($emailTo) || $emailTo == '') {
+            $emailTo = get_option('admin_email');
+        }
+        $subject = '[Devgrocery] From ' . $name;
+        $body = "Name: $name \n\nEmail: $email \n\nComments: $comments";
+        $headers =
+            'From: ' .
+            $name .
+            ' <' .
+            $emailTo .
+            '>' .
+            "\r\n" .
+            'Reply-To: ' .
+            $email;
+        wp_mail($emailTo, $subject, $body, $headers);
+        $emailSent = true;
+    }
+} ?>
+<?php get_header(); ?>
 <div class="hero-img">
 
 </div>
-
 <div class="hero-text">
     <h2>Kontakt</h2>
     <p>Curabitur sem nisl, hendrerit quis massa ut, dictum tristique libero. <br>
@@ -34,68 +68,35 @@ get_header(); ?>
         tortor ligula porta risus,<br> vel tincidunt purus tellus in odio.</p>
 </div>
 
-<div class="container-form">
-<h2>Komma i kontakt <span>Registrera dig och berätta vad du tycker om shop!</span> </h2>
-<div class="form">
-<form name="contact_form" method="POST" action="<?php echo esc_url(
-    admin_url('admin-post.php')
-); ?>" enctype="multipart/form-data" autocomplete="off" accept-charset="utf-8">
-
-	<div class="inner-wrap">
-    <label for="namn">
-			Namn:
-			<input type="text" name="contact_full_name" required="">
-		</label>
-	</div>
-
-	<div class="inner-wrap">
-    <label for="mail">
-			E-post:
-			<input type="email" name="contact_email" required="">
-		</label>
-	</div>
-    <div class="inner-wrap">
-    <label for="msg">Message:</label>
-     
-            <textarea name="contact_message" cols="20" rows="5" required=""></textarea>
-			
-		</label>
-	</div>
-
-	<input type="hidden" name="action" value="contact_form">
-
-	<input type="hidden" name="base_page" value="<?php echo home_url(
-     $wp->request
- ); ?>">
-
-	<div >
-		<button type="submit" name="submit_btn" class="submit-btn" >
-			Skicka
-		</button>
-	</div>
-
+	<div id="container">
+		<div id="content" class="form">
+			<?php the_post(); ?>
+			<div id="post-<?php the_ID(); ?>" class="post">
+				<div class="entry-content">
+				<form action="<?php the_permalink(); ?>" id="contactForm" method="post">
+	<ul>
+		<li>
+			<label for="contactName">Name:</label>
+			<input type="text" name="contactName" id="contactName" value="" />
+		</li>
+		<li>
+			<label for="email">E-post:</label>
+			<input type="text" name="email" id="email" value="" />
+		</li>
+		<li>
+			<label for="commentsText">Message:</label>
+			<textarea name="comments" id="commentsText" rows="20" cols="30"></textarea>
+		</li>
+		<li>
+			<button type="submit">Skicka</button>
+		</li>
+	</ul>
+	<input type="hidden" name="submitted" id="submitted" value="true" />
 </form>
-</div>
+				</div>
+			</div><!-- .post-->
+		</div><!-- #content -->
+	</div><!-- #container -->
 
-</div>
 
-<!-- new registeration -->
-
-<section class="container popular-products">
-	<hr>
-<h1 class="text-center pt-5">Categories</h1>
-<p class="text-center">We offer a number of high quality food!</p>
-
-<div class="pt-4 pb-4">
-
-<?php echo do_shortcode(
-    '[product_categories limit="4" orderbyid="id" order="DESC"]'
-); ?>
-
-</div>
-
-</section>
-
-<?php get_footer();
-
-?>
+<?php get_footer(); ?>
