@@ -8,16 +8,20 @@ get_header(); ?>
         while (have_posts()):
             the_post(); ?>
 
-<div class="page-hero">
+	<div class="page-hero">
 
-    <div class="page-hero_heading"><?php the_title(); ?></div>
+		<div class="page-hero_heading"><?php the_title(); ?>
 
-</div>
+ 
+		
+		</div>
 
-    <?php the_content(); ?>
-	
+	</div>
 
-<?php
+		<?php the_content(); ?>
+		
+
+	<?php
         endwhile;
     } ?>
 

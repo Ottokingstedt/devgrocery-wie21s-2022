@@ -17,7 +17,7 @@
 					<h2>Navigation</h2>
 					<ul>
 						<li> <?php $args = [
-          'theme_location' => 'footer menu',
+          'theme_location' => 'menu-2',
       ]; ?>
 							<?php wp_nav_menu($args); ?>
 						</li>
@@ -32,24 +32,30 @@
 			</ul>
 		</div>
 		<div class="footer-item">
+			<div class="footer-container">
 		<a href="<?php echo get_home_url('/'); ?>"> 
                 <h2><?php bloginfo('name'); ?></h2>
                 </a>
+				
+
+		</div>
+		</div>
 		</div>
 	</div>
 	</footer><!-- #colophon -->
 
 	<div class="copyright">
-		<div class="container">
+		
+	
 			<div class="copyright-grid">
 			<div class="copytext">
 				<p>Copyright @  <?php the_date('Y'); ?> - All Rights Reserved </p>
 			</div>
 
 			</div>
-		</div>
+	
 	</div>
-</div><!-- #page -->
+<!-- #page -->
 
 <?php wp_footer(); ?>
 

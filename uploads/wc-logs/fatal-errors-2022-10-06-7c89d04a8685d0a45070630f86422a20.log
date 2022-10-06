@@ -1,0 +1,4 @@
+2022-10-06T08:46:32+00:00 CRITICAL syntax error, unexpected end of file, expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) in /Applications/MAMP/htdocs/woo-grupp10/wp-content/themes/devgrocery/front-page.php on line 137
+
+2022-10-06T10:36:11+00:00 CRITICAL syntax error, unexpected 'endwhile' (T_ENDWHILE), expecting end of file in /Applications/MAMP/htdocs/woo-grupp10/wp-content/themes/devgrocery/front-page.php on line 129
+

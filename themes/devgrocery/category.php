@@ -6,6 +6,7 @@
 
 get_header(); ?>
 
+    <div class="container">
 	<section id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
 
@@ -13,8 +14,9 @@ get_header(); ?>
 
 			<header class="archive-header">
 				<h1 class="archive-title">
-				<?php /* translators: %s: Category title. */
-    printf(
+				 /* translators: %s: Category title. */<?php
+       /* translators: %s: Category title. */
+       ?>printf(
         __('Category Archives: %s', 'devgrocery'),
         single_cat_title('', false)
     ); ?>
@@ -29,8 +31,7 @@ get_header(); ?>
     ?>
 			</header><!-- .archive-header -->
 
-				<?php
-    // Start the Loop.
+				<?php // Start the Loop.
     while (have_posts()):
         the_post();
 
@@ -40,9 +41,8 @@ get_header(); ?>
          * (where ___ is the post format) and that will be used instead.
          */
         get_template_part('content', get_post_format());
-    endwhile;
-    ?>
-		<?php endif ?>
+    endwhile; ?>
+		<?php endif; ?>
 	</section><!-- #primary -->
-
+    </div>
 <?php get_footer();
