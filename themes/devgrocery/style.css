@@ -136,6 +136,17 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
   margin-right: auto;
   margin-bottom: 1.5em;
 }
+img.rounded.float-start {
+  width: 350px;
+  border-radius: 10px;
+}
+.col-caption {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.caption-text {
+  padding: 5rem;
+}
 /*-------- container--------- */
 .post,
 .page {
@@ -227,9 +238,13 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
   padding-top: 2rem;
   color: rgb(31, 31, 31);
 }
-
+.form-header {
+  background: #58a3a3;
+  width: 100%;
+  padding: 2rem;
+}
 .container-form {
-  width: 650px;
+  width: 850px;
   padding: 30px;
   margin: 40px auto;
   background: #fff;
@@ -240,8 +255,6 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 .container-form .inner-wrap {
   padding: 30px;
   background: #f8f8f8;
-  border-radius: 6px;
-  margin-bottom: 15px;
 }
 .container-form h2 {
   background: #8fc1d5;
@@ -269,17 +282,28 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
   font-size: 15px;
   align-items: flex-end;
 }
+textarea,
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
 /* ---------Footer ------------ */
 
 footer {
-  width: 100%;
-  height: 350px;
+  display: flex;
   background: #617c7c;
+}
+.footer-col {
+  display: flex;
+  padding: 2rem;
 }
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem;
+  grid-gap: 40%;
 }
 .footer-grid .footer-item {
   align-self: flex-start;
@@ -324,7 +348,8 @@ footer {
 .footer-item:nth-child(3) a:hover {
   color: rgb(151, 151, 151);
 }
-.footer-container {
+.footer-container-logo {
+  float: right;
   padding: 3rem;
   text-align: end;
 }
@@ -404,38 +429,36 @@ footer {
 }
 /* Page Hero */
 .page-hero {
-	display: -ms-grid;
-	display: grid;
-	height: 30vh;
-	background-color: #ececec;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	justify-items: center;
-	-webkit-box-align: center;
-		-ms-flex-align: center;
-			align-items: center;
-	color: #fff;
-	margin: 0px 0;
-  }
-  
-  .page-hero__heading {
-	color: #fff;
-  }
+  display: -ms-grid;
+  display: grid;
+  height: 30vh;
+  background-color: #ececec;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  justify-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #fff;
+  margin: 0px 0;
+}
 
-  /* Testimonials */
+.page-hero__heading {
+  color: #fff;
+}
 
-  .testimonials {
-	display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-	margin-top: 10px;
+/* Testimonials */
 
-  }
+.testimonials {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  margin-top: 10px;
+}
 
-  .testimonial {
-	border: 1px solid black !important;
-	border-radius: 20px;
-	padding: 10px;
-  }
-
+.testimonial {
+  border: 1px solid black !important;
+  border-radius: 20px;
+  padding: 10px;
+}

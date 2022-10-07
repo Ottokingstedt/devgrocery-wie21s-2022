@@ -71,12 +71,18 @@ Template Name: Contact
 
 
 		<div class="container-form">
+        <div class="form-header">
+                <h1>Har du fler frågor?</h1>
+                <span>Log in och kontakta oss!</span>
+            </div>
 			<div class="inner-wrap">
-		<div id="content" class="inner-form">
+		    <div id="content" class="inner-form">
+              
+          
 			<?php the_post(); ?>
 			<div id="post-<?php the_ID(); ?>" class="post">
-				<div class="inner-wrap">
-				<form action="<?php the_permalink(); ?>" id="contactForm" method="post">
+       
+			<form action="<?php the_permalink(); ?>" id="contactForm" method="post">
 	<ul>
 		<li>
 			<label for="contactName">Name:</label>

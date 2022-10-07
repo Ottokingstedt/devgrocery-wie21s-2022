@@ -56,22 +56,25 @@ get_header(); ?>
 
 <section class="container-fluid bg-primary text-white pt-4 pb-4">
   <div class="row">
-  <div class="thumbnail col text-center"> 
   
-  <img src="https://images.unsplash.com/photo-1501262139015-998ac3d1e0be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80" alt="" class="rounded float-start">
-        <div class="caption">
-        <h2 class="shop-section_heading">Hemgjorda äppelpajer</h2>
-        </div>
-  </div>
-  <div class="col">
-  <p class="shop-section_body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-  </p>
+    <div class="thumbnail col text-center"> 
+    <div class="col-caption">
+    <div class="caption-text">
+          <h2 class="shop-section_heading">Hemgjorda äppelpajer</h2>
+          <p class="shop-section_body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+          </p>
+          <a class="button-news" href="<?php the_permalink(); ?>">Läs mer</a> 
+    </div>
+    <div class="caption-img">
+      <img src="https://images.unsplash.com/photo-1501262139015-998ac3d1e0be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80" alt="" class="rounded float-start">
 
-  </div>
-
+    </div>
+    </div>
+    
+    </div>
   </div>
 </section>
 

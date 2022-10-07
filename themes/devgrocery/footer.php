@@ -11,7 +11,7 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-	<div class="container">
+	<div class="footer-col">
 		<div class="footer-grid">
 				<div class="footer-item">
 					<h2>Navigation</h2>
@@ -32,7 +32,7 @@
 			</ul>
 		</div>
 		<div class="footer-item">
-			<div class="footer-container">
+			<div class="footer-container-logo">
 		<a href="<?php echo get_home_url('/'); ?>"> 
                 <h2><?php bloginfo('name'); ?></h2>
                 </a>
